@@ -1,0 +1,113 @@
+﻿
+*
+{
+    color-scheme: light dark;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.wrapper header {
+    text-align: center;
+    grid-template: "header";
+
+}
+
+.wrapper.input-field {
+    grid-template: "input-field";
+}
+
+.wrapper.button-container {
+    margin-top: 10%;
+    grid-template: "button-container";
+    /*display: grid;*/
+    /*grid-template-columns: repeat(4, 1fr);*/
+
+
+}
+
+#calculate {
+    grid-template: "calculate";
+    /*grid-column:  1 /3;*/
+    width: 40%;
+    float: left;
+    margin-right: 20%;;
+
+}
+
+#clear {
+
+	color: red;
+    grid-template: "clear";
+    width: 40%;
+}
+
+
+@media only screen and (max-width: 45em) {
+
+    .wrapper {
+
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+
+        grid-template-rows: 60px 1fr 1fr;
+    }
+
+    .wrapper header {
+        text-align: center;
+        grid-template: "header";
+        align-items: center;
+        margin:  0;
+
+    }
+    .wrapper header h1
+    {
+        margin-top: 0;
+    }
+
+    .wrapper.input-field {
+        grid-template: "input-field";
+        grid-row: 1/3;
+        height: 4em;
+        width: 50em;
+        margin-bottom: 5%;
+
+    }
+
+    .wrapper.button-container {
+        margin-top: 10%;
+        display: flex;              
+        /*display: grid;*/
+        /*grid-template-columns: repeat(4, 1fr);*/
+        grid-row: 2/3;
+
+
+    }
+
+}
+
+/* @media (pefers-color-scheme: light) 
+{
+    *
+    {
+        color: black;
+    }   
+} */
+/* 
+@media (prefers-color-scheme: dark) {
+    
+    *
+    {
+        color: white;
+        background-color: black;
+    }   
+
+    .wrapper > .input-field, .wrapper.button-container > button
+    {
+        background-color: rgb(53, 51, 51);
+    }
+} */
